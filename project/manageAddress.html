@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>管理地址</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/manageAddress.css" rel="stylesheet" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">管理地址</h1>
+		</header>
+
+		<div class="mui-content">
+			<h2 class="sba">可以添加新的收货地址哦<button class="add mui-btn mui-btn-right">添加</button></h2>
+			<div class="place">
+				<dl>
+					<dt>
+						<h4 class="sba"><p>收货人：<span>瞄星人</span></p><p>123456789</p></h4>
+						<p>1是否水电方水电费是否水电费地方水电费是否水电费地方水电费是否水电费地方水电费</p>
+					</dt>
+					<dd class="sba">
+						<div class="saa"><em class="default active"></em><span>默认收获地址</span></div>
+						<div class="saa">
+							<p class="saa"><i><img src="img/edit1.png"/></i><span>编辑</span></p>
+							<p class="saa del"><i><img src="img/del1.png"/></i><span>删除</span></p>
+						</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<h4 class="sba"><p>收货人：<span>瞄星人</span></p><p>123456789</p></h4>
+						<p>2是否水电方水电费是否水电费地方水电费是否水电费地方水电费是否水电费地方水电费</p>
+					</dt>
+					<dd class="sba">
+						<div class="saa"><em class="default"></em><span>默认收获地址</span></div>
+						<div class="saa">
+							<p class="saa"><i><img src="img/edit1.png"/></i><span>编辑</span></p>
+							<p class="saa del"><i><img src="img/del1.png"/></i><span>删除</span></p>
+						</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<h4 class="sba"><p>收货人：<span>瞄星人</span></p><p>123456789</p></h4>
+						<p>3是否水电方水电费是否水电费地方水电费是否水电费地方水电费是否水电费地方水电费</p>
+					</dt>
+					<dd class="sba">
+						<div class="saa"><em class="default"></em><span>默认收获地址</span></div>
+						<div class="saa">
+							<p class="saa"><i><img src="img/edit1.png"/></i><span>编辑</span></p>
+							<p class="saa del"><i><img src="img/del1.png"/></i><span>删除</span></p>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			mui('.add')[0].addEventListener('tap',function(){
+				open('addAddress.html');
+			},false);
+			
+			
+			mui('.place').on('tap','.default',function(){
+				//选中样式
+				var em=document.querySelectorAll('.default');
+				for(var i=0;i<em.length;i++){
+					em[i].className="default";
+				}
+				this.className="default active";
+				
+				//将选中的放到第一位
+				var def=this.parentNode.parentNode.parentNode;
+				clone=def.cloneNode(true);
+				var newdiv=document.createDocumentFragment();
+				newdiv.appendChild(clone);
+				var firstC=mui('.place')[0].firstElementChild;
+				clone.getElementsByClassName('default')[0].className="default active";
+				mui('.place')[0].insertBefore(newdiv,firstC);
+				def.remove();
+ 			})
+			mui('.place').on('tap','.del',function(){
+				var dl=this.parentNode.parentNode.parentNode;
+				dl.remove();
+			})
+		</script>
+	</body>
+
+</html>

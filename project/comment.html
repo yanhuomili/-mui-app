@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>发表评论</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/comment.css" rel="stylesheet" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">发表评论</h1>
+		</header>
+
+		<div class="mui-content">
+			<ul class="mui-table-view">
+			    <li class="mui-table-view-cell mui-media headPic">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="img/heaPic.png">
+			            <div class="mui-media-body">
+			                <p><textarea name="" rows="" cols="" placeholder="请输入评论内容"></textarea></p>
+			            </div>
+			        </a>
+			    </li>
+			</ul>
+			<div class="pictures">
+				<a href="###" class="camera mui-btn mui-icon mui-icon-camera"><input type="file" name="" id="" value="" /></a>
+			</div>
+			<ul class="mui-table-view">
+			        <li class="mui-table-view-cell">
+			            <a class="starP sba">
+			                <p class="text-p">产品描述:</p>
+			                <p class="star-p">
+			                	<button href="###" class="mui-btn mui-icon mui-icon-star"></button>
+			                	<button href="###" class="mui-btn mui-icon mui-icon-star"></button>
+			                	<button href="###" class="mui-btn mui-icon mui-icon-star"></button>
+			                	<button href="###" class="mui-btn mui-icon mui-icon-star"></button>
+			                	<button href="###" class="mui-btn mui-icon mui-icon-star"></button>
+			                </p>
+			            </a>
+			        </li>
+			    </ul>
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui('.camera').on('change','input',function(){
+					var f=this.files;//获取问价对象
+					var len=f.length;//获取文件个数
+					console.log(f)
+					for(var i=0;i<len;i++){
+						var read=new FileReader();//实例化文件读取对象
+						read.readAsDataURL(f[i]);//通过循环去读取每个文件里面的url
+						read.onload=function(){//等待里面的文件内容加载完后，将图片渲染到页面上
+							var Img=document.createElement('img');
+							Img.className='picture';
+							Img.src=this.result;//这里需要转换成原生对象去添加路径
+							mui('.pictures')[0].appendChild(Img);
+						}
+					}
+					
+				})
+		</script>
+	</body>
+
+</html>

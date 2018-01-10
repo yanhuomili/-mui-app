@@ -1,0 +1,70 @@
+@charset "UTF-8";
+.mui-slider-indicator.mui-segmented-control{
+    display: flex !important;
+    justify-content: center !important;
+}
+.mui-segmented-control.mui-scroll-wrapper .mui-control-item{
+    padding: 0 50px !important;
+    border-bottom: 2px solid transparent;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+    color: #4ba60f;
+    border-bottom: 2px solid #4ba60f !important;
+}
+.mui-segmented-control.mui-scroll-wrapper{
+    height: 45px;
+    
+}
+.mui-fullscreen .mui-segmented-control~.mui-slider-group{
+    top: 47px !important;
+}
+.mui-slider-item{
+    border-top: none !important;
+}
+.topMenu{
+    width: 100%;
+    a{
+    }
+}
+.mui-table-view-cell:after{
+    height: 0 !important;
+}
+.mui-table-view{
+    background: #f1f1f1;
+}
+.list{
+    li{
+        background: #fff;
+        border-bottom: 1px solid #eee;
+    }
+    .mui-media-object{
+        max-width: 76px !important;
+        height: 76px !important;
+    }
+    .mui-media-body{
+        i{
+            color: #4ba60f;
+            margin-right: 30px;
+            font-style: normal !important;
+        }
+        
+    }
+    p{
+        white-space: normal;
+        display: flex;
+        align-items: center;
+    }
+    .text{
+        margin-bottom: 10px;
+    }
+    .shop-car{
+        margin-left: 80px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

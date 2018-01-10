@@ -1,0 +1,13 @@
+.touxiang { margin-bottom: 10px !important; }
+.touxiang img { max-width: 60px !important; height: 60px !important; border-radius: 50%; }
+.touxiang .name { margin-top: 5px; color: #666; }
+.touxiang .name i { margin-bottom: 5px; font-size: 15px !important; color: #333; }
+
+.f-list { margin-bottom: 10px !important; }
+.f-list i { display: inline-block; width: 40px; height: 40px; margin-bottom: 5px; }
+.f-list i img { width: 100%; height: 100%; }
+.f-list span { font-size: 14px !important; }
+
+.f-list2 li { padding: 15px 15px; }
+.f-list2 li i { display: inline-block; width: 21px; height: 21px; margin-right: 10px; }
+.f-list2 li i img { width: 100%; height: 100%; }

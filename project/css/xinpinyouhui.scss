@@ -1,0 +1,47 @@
+@charset "UTF-8";
+.mui-table-view-cell:after{
+    height: 0 !important;
+}
+.good-list{
+    .list{
+       
+        a{
+            border-bottom: 1px solid #eee;
+        }
+        background: #f1f1f1;
+        .mui-table-view-cell{
+            margin-bottom: 5px;
+            background: #fff;
+        }
+        .mui-media-object{
+            max-width: 76px !important;
+            height: 76px !important;
+        }
+        .mui-media-body{
+            i{
+                color: #4ba60f;
+                margin-right: 15px;
+                font-style: normal !important;
+            }
+            
+        }
+        p{
+            white-space: normal;
+            display: flex;
+            align-items: center;
+        }
+        .text{
+            margin-bottom: 5px;
+        }
+        .zhe{
+            color: #ff323c;
+        }
+    }
+}
+.order{
+    padding: 15px 0 0;
+    .mui-btn-danger{
+        box-shadow: none !important;
+        border: transparent !important;
+    }
+}

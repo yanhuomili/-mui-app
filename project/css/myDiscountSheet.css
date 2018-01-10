@@ -1,0 +1,8 @@
+.list { padding: 0 15px; }
+.list dl { padding: 25px 15px; background: #fff; border: 1px solid #F0AD4E; border-radius: 5px; border-top: 20px solid #F0AD4E; }
+.list dl dt { color: #F0AD4E; }
+.list dl dd p { margin-bottom: 10px; }
+.list .guoqi { border-top-color: #ccc; }
+.list .guoqi dt { color: #ccc; }
+.list .yishiyong { border-top-color: #ccc; }
+.list .yishiyong dt { color: #ccc; }

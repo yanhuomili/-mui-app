@@ -1,0 +1,46 @@
+@charset "UTF-8";
+.mui-input-row{
+   height: 50px !important;
+   padding-top: 5px;
+   font-size: 14px;
+   input{
+       font-size: 14px;
+   }
+}
+.mui-icon-clear{
+    top: 17px !important;
+}
+.check{
+    display: flex;
+    align-items: center;
+    i{
+        font-style: normal;
+        display: inline-block;
+        width: 70px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        background:  #4cd964;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        color: #fff;
+        transform: translateY(-50%);
+    }
+    .mui-icon-clear{
+        right: 90px !important;
+    }
+}
+.mui-checkbox input[type=checkbox], .mui-radio input[type=radio]{
+    top:9px !important;
+}
+.mui-input-row:after{
+    left: 0 !important;
+    
+}
+.mui-input-group:after{
+    height: 0 !important;
+}
+.mui-button-row{
+    margin-top: 15px;
+}

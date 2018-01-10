@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/my.css" rel="stylesheet" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的</h1>
+		</header>
+
+		<div class="mui-content">
+			<ul class="mui-table-view touxiang">
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-right" src="img/heaPic.png">
+			            <div class="mui-media-body">
+			                <p class="name dlc">
+			                	<i>皮皮虾</i>
+			                	<span>普通会员</span>
+			                </p>
+			            </div>
+			        </a>
+			    </li>
+			</ul>
+			
+			<ul class="mui-table-view mui-grid-view f-list sba">
+			       
+		        <li class="mui-table-view-cell mui-col-xs-3 sbd">
+		            <i><img src="img/my-menu1.png"/></i>
+		            <span>购物车</span>
+		        </li>
+		        <li class="mui-table-view-cell mui-col-xs-3 sbd">
+		            <i><img src="img/my-menu2.png"/></i>
+		            <span>订单管理</span>
+		        </li>
+		       	<li class="mui-table-view-cell mui-col-xs-3 sbd">
+		            <i><img src="img/my-menu3.png"/></i>
+		            <span>会员等级</span>
+		        </li>
+		        <li class="mui-table-view-cell mui-col-xs-3 sbd">
+		            <i><img src="img/my-menu4.png"/></i>
+		            <span>消息中心</span>
+		        </li>
+		    </ul>
+			
+			<ul class="mui-table-view f-list2">
+			        <li class="mui-table-view-cell">
+			            <a class="mui-navigate-right">
+			                <p class="saa"><i><img src="img/function1.png"/></i><span>地址管理</span></p>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell">
+			            <a class="mui-navigate-right">
+			                <p class="saa"><i><img src="img/function2.png"/></i><span>会员专属</span></p>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell">
+			            <a class="mui-navigate-right">
+			                <p class="saa"><i><img src="img/function3.png"/></i><span>我的优惠券</span></p>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell">
+			            <a class="mui-navigate-right">
+			                <p class="saa"><i><img src="img/function4.png"/></i><span>我的收藏夹</span></p>
+			            </a>
+			        </li>
+			        <li class="mui-table-view-cell">
+			            <a class="mui-navigate-right">
+			                <p class="saa"><i><img src="img/function5.png"/></i><span>修改手机号</span></p>
+			            </a>
+			        </li>
+			    </ul>
+		</div>
+		<nav class="nav mui-bar mui-bar-tab" style="background: #efeff4 !important;;">
+			<a class="mui-tab-item one">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">商城</span>
+			</a>
+			<a class="mui-tab-item two">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">农场</span>
+			</a>
+			<a class="mui-tab-item mui-active thr">
+				<span class="mui-icon mui-icon-email"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+			
+		</nav>
+		<script src="js/mui.min.js"></script>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			var num=60;
+			var timer=null;
+			mui('.check').on('tap','i',function(){
+				mui('.check i')[0].style.backgroundColor="#ccc";
+				mui('.check i')[0].innerHTML=num+'s后重试';
+				clearInterval(timer);
+				timer=setInterval(function(){
+					num--;
+					mui('.check i')[0].innerHTML=num+'s后重试';
+					if(num==0){
+						clearInterval(timer);
+						mui('.check i')[0].style.backgroundColor='#4cd964';
+						mui('.check i')[0].innerHTML="验证码";
+						num=60;
+						
+					}
+				},1000)
+				
+			})
+			
+			mui('.nav').on('tap','.one',function(){
+				console.log(123)
+				open('index.html');
+			})
+			mui('.nav').on('tap','.two',function(){
+				open('nongchang.html');
+			})
+			
+			//跳到个人信息
+			mui('.mui-media-object')[0].addEventListener('tap',function(){
+				open('private-info.html');
+			},false);
+			
+			//跳到消息中心
+			mui('.f-list').on('tap','li',function(){
+				var text=this.lastElementChild.innerText;
+				if(text=='购物车'){
+					open('shop-car.html');
+				}else if(text=='订单管理'){
+					open('order-manage.html');	
+				}else if(text=='会员等级'){
+					open('huiyuandengji.html');
+				}else if(text=='消息中心'){
+					console.log(text);
+					open('newCenter.html');
+				}
+			})
+			
+			mui('.f-list2').on('tap','li',function(){
+				var text=this.children[0].children[0].lastElementChild.innerText;
+				console.log(text)
+				if(text=='地址管理'){
+					open('manageAddress.html');
+				}else if(text=='会员专属'){
+					open('huiyuanzhuanshu.html');
+				}else if(text=='我的优惠券'){
+					open('myDiscountSheet.html');
+				}else if(text=='我的收藏夹'){
+					open('myfavorites.html');
+				}else if(text=='修改手机号'){
+					open('repairPhone.html');
+				}
+			})
+		</script>
+	</body>
+
+</html>

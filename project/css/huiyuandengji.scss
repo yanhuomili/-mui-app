@@ -1,0 +1,136 @@
+@charset "UTF-8";
+.picture{
+    padding: 20px 0;
+    box-sizing: border-box;
+    background: #fff;
+    margin-bottom: 10px;
+    img{
+        width: 60px;
+        height:60px;
+    }
+}
+.explain{
+    margin: 10px 0 !important;
+}
+.huiyuan{
+    .title{
+        border-bottom: 1px solid #eee;
+        p{
+            display: flex;
+            align-items: center;
+        }
+        i{
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            margin-right: 10px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .list{
+        .mui-table-view-cell:after{
+            height: 0;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            dl{
+                margin: 0;
+                dt{
+                    width: 30px;
+                    height: 33px;
+                    margin: 0;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                dd{
+                    margin: 0;
+                    margin-left: 10px;
+                    font-size: 14px;
+                    .price{
+                        font-size: 12px;
+                        color: #4ba60f;
+                    }
+                }
+            }
+            button{
+                border: 1px solid #4ba60f !important;
+                padding: 4px 20px;
+                color: #4ba60f;
+            }
+        }
+    }
+}
+
+.dianpu{
+    margin-bottom: 15px !important;
+    .dizhi{
+        .title{
+            font-size: 17px;
+            color: #333;
+        }
+        p{
+            margin-bottom: 5px;
+            button{
+                padding: 0;
+                border: none;
+            }
+        }
+    }
+}
+.jieshao{
+    margin-bottom: 15px !important;
+    p{
+        color: #333;
+        font-size: 16px;
+    }
+}
+.good-list{
+    background: #fff;
+    .title{
+        height: 40px;
+        font-size: 16px;
+        padding: 0 15px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #eee;
+        i{
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            margin-right: 10px;
+            img{
+                width: 100%;
+                height:100%;
+            }
+        }
+    }
+    .list{
+        .mui-media-object{
+            max-width: 76px !important;
+            height: 76px !important;
+        }
+        .mui-media-body{
+            i{
+                color: #4ba60f;
+                margin-right: 30px;
+                font-style: normal !important;
+            }
+            
+        }
+        p{
+            white-space: normal;
+            display: flex;
+            align-items: center;
+        }
+        .text{
+            margin-bottom: 10px;
+        }
+    }
+}

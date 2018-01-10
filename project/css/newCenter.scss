@@ -1,0 +1,20 @@
+@charset "UTF-8";
+.list{
+    padding: 0 15px;
+    h6{
+        text-align: center;
+        margin: 20px;
+    }
+    dl{
+        padding: 15px 15px;
+        background: #fff;
+        border-radius: 5px;
+        dt{
+            color: #333;
+            margin: 0 !important;
+        }
+        dd{
+            margin: 10px 0 0!important;
+        }
+    }
+}

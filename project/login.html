@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/login.css" rel="stylesheet" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">登录</h1>
+		</header>
+
+		<div class="mui-content">
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+				    <label class=""><img src="img/function5.png"/></label>
+				    <input type="text" class="mui-input-clear" placeholder="手机号/会员号">
+				</div>
+				<div class="mui-input-row check">
+				    <label class=""><img src="img/function5.png"/></label>
+					    <input type="password" class="mui-input-clear" placeholder="密码">
+				</div>
+				<div class="operate sba"><p class="saa"><em></em><span>记住密码</span></p><p class="forgetPass">忘记密码</p></div>
+				<div class="mui-button-row">
+			        <button type="button" class="mui-btn mui-btn-block mui-btn-mini mui-btn-success" >登录</button>
+			    </div>
+			</form>
+			<p class="cc zhuce">还没有注册？<a href="###" class="now">马上注册</a></p>
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/common.js"></script>
+		
+		<script type="text/javascript">
+			mui.init()
+			var num=60;
+			var timer=null;
+			mui('.check').on('tap','i',function(){
+				mui('.check i')[0].style.backgroundColor="#ccc";
+				mui('.check i')[0].innerHTML=num+'s后重试';
+				clearInterval(timer);
+				timer=setInterval(function(){
+					num--;
+					mui('.check i')[0].innerHTML=num+'s后重试';
+					if(num==0){
+						clearInterval(timer);
+						mui('.check i')[0].style.backgroundColor='#4cd964';
+						mui('.check i')[0].innerHTML="验证码";
+						num=60;
+						
+					}
+				},1000)
+				
+			})
+	
+			mui('.zhuce').on('tap','a',function(){
+				open('register.html');
+			})
+			mui('.operate').on('tap','.forgetPass',function(){
+				open('forget.html');
+			})
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>订单支付</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/order-pay.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/app.css">
+		
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">订单支付</h1>
+		</header>
+		<div id="upbox" class="mui-content">
+			<ul class="mui-table-view person-info">
+		        <li class="mui-table-view-cell">
+		            <a class="mui-navigate-right">
+		            	<p><i><img src="img/position.png"/></i></p>
+		                <div>
+		                	<p class="per sba"><span>收件人：喵星人</span><span>188****2354</span></p>
+		                	<p class="place">是否是发生的发水电费第三方水电费是电风扇的水电费水电费水电费</p>
+		                </div>
+		            </a>
+		        </li>
+		    </ul>
+		    <div class="good">
+		    	<h2 class="dianpu saa"><i><img src="img/buyCar.png"/></i><span>不二家</span></h2>
+		    	<ul class="mui-table-view list">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="img/hz1.jpg">
+				            <div class="mui-media-body">
+				                <p class="text">地址广州市白云区云城西路89号地址广州市白云区云城西路89号</p>
+				                <p class="">属性：<span>265g/袋</span></p>
+				                <p class="saa"><i>&yen; 59.9</i><span>X 2</span></p>
+				            </div>
+				        </a>
+				    </li>
+				</ul>
+				<div class="number sba">
+					<span>购买数量</span>
+					<div class="mui-numbox" data-numbox-min="1">
+					  <!-- "-"按钮，点击可减小当前数值 -->
+					  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+					  <input class="mui-numbox-input" type="number" />
+					  <!-- "+"按钮，点击可增大当前数值 -->
+					  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+					</div>
+				</div>
+				<p class="f youhui">商品优惠券<span>&yen; 0.00 <i class="jiantou">></i></span></p>
+				<p class="sba shifu">备注 <span class="sba"><input type="text" name="" id="" placeholder="备注信息" /><i>></i></span></p>
+				<div class="pn">
+					<p>共<span>2</span>件商品</p>
+					<p>实付<span class="price">￥29.9</span></p>
+				</div>
+		    </div>
+			<div class="footer sba">
+				<p>实付:<span>&yen; 66</span></p>
+				<button id="">确认支付</button>
+			</div>
+			
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script>
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			
+		</script>
+	</body>
+
+</html>

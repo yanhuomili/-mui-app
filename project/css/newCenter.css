@@ -1,0 +1,5 @@
+.list { padding: 0 15px; }
+.list h6 { text-align: center; margin: 20px; }
+.list dl { padding: 15px 15px; background: #fff; border-radius: 5px; }
+.list dl dt { color: #333; margin: 0 !important; }
+.list dl dd { margin: 10px 0 0 !important; }

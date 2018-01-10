@@ -1,0 +1,12 @@
+.mui-table-view-cell:after { height: 0 !important; }
+
+.good-list .list { background: #f1f1f1; }
+.good-list .list a { border-bottom: 1px solid #eee; }
+.good-list .list .mui-table-view-cell { margin-bottom: 5px; background: #fff; }
+.good-list .list .mui-media-object { max-width: 76px !important; height: 76px !important; }
+.good-list .list .mui-media-body i { color: #4ba60f; margin-right: 30px; font-style: normal !important; }
+.good-list .list p { white-space: normal; display: flex; align-items: center; }
+.good-list .list .text { margin-bottom: 10px; }
+
+.order { padding: 15px 0 0; }
+.order .mui-btn-danger { box-shadow: none !important; border: transparent !important; }

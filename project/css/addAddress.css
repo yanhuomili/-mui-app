@@ -1,0 +1,6 @@
+.mui-input-row { height: 50px !important; padding-top: 5px; font-size: 14px; }
+.mui-input-row input { font-size: 14px; }
+
+.mui-checkbox input[type=checkbox], .mui-radio input[type=radio] { top: 9px !important; }
+
+.mui-input-row:after { left: 0 !important; }

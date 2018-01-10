@@ -1,0 +1,47 @@
+@charset "UTF-8";
+.mui-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.mui-card{
+    margin: 0 0 10px !important;
+    padding: 5px;
+    box-shadow: none !important;
+    .mui-card-header{
+        padding: 0;
+    }
+    .mui-card-content{
+        padding: 5px 10px;
+        font-size: 12px;
+        color: #666;
+    }
+    .mui-card-footer{
+        padding: 5px;
+        .left{
+            margin: 0;
+            dt{
+                margin: 0;
+                font-size: 12px;
+                
+                i{
+                    font-size: 16px;
+                    color: #fb4141;
+                    margin: 0 5px;
+                }
+            }
+            dd{
+                margin: 0;
+                font-size: 12px;
+            }
+        }
+        .right{
+            padding: 0 5px;
+        }
+    }
+    img{
+        width: 100% !important;
+        height: 100% !important;
+    }
+}

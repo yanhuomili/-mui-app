@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.mui-table-view .mui-media-object{
+    border-radius: 50%;
+}
+.mui-table-view-cell:after{
+    height: 0 !important;
+}
+.mui-table-view{
+    background: #f1f1f1 !important;
+}
+.list{
+    .a{
+        margin: 5px -15px !important;
+    }
+    width: 100%;
+    li{
+        margin-bottom: 10px;
+        background: #fff !important;
+    }
+    .mui-media-body{
+        p{
+            font-size: 14px;
+            .date{
+                font-size: 12px;
+            }
+            button{
+                padding: 0;
+                font-size: 16px;
+                border: none;
+            }
+        }
+    }
+}

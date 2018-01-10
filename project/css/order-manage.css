@@ -1,0 +1,33 @@
+.mui-slider-indicator.mui-segmented-control { display: -webkit-box !important; display: -webkit-flex !important; display: -ms-flexbox !important; display: flex !important; -webkit-box-pack: center !important; -webkit-justify-content: center !important; -ms-flex-pack: center !important; justify-content: center !important; }
+
+.mui-segmented-control.mui-scroll-wrapper .mui-control-item { padding: 0 60px !important; border-bottom: 2px solid transparent; }
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active { color: #4ba60f; border-bottom: 2px solid #4ba60f !important; }
+
+.mui-segmented-control.mui-scroll-wrapper { height: 45px; }
+
+.mui-fullscreen .mui-segmented-control ~ .mui-slider-group { top: 47px !important; }
+
+.mui-slider-item { border-top: none !important; }
+
+.topMenu { width: 100%; }
+
+.mui-table-view-cell:after { height: 0 !important; }
+
+.mui-table-view { background: #f1f1f1; }
+
+.list li { margin-bottom: 10px; background: #fff; }
+.list .order-number { margin: 10px 0; }
+.list .mui-media-object { max-width: 76px !important; height: 76px !important; }
+.list .mui-media-body i { color: #4ba60f; margin-right: 30px; font-style: normal !important; }
+.list a { border-bottom: 1px solid #eee; margin-bottom: 0px !important; }
+.list h4 { font-size: 14px; font-weight: normal; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: end; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end; margin: 10px 0; }
+.list h4 button { margin-left: 10px; background: #4ba60f; color: #fff; border: none; }
+.list h4 .comment { background: #ccc; color: #333; }
+.list h4 span { margin: 0 5px; }
+.list h4 .shouhou { background: transparent; color: #333; border: 1px solid #eee; }
+.list p { white-space: normal; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; margin-bottom: 5px; }
+.list .sh-p { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: end; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end; }
+.list .sh-p span { margin: 5px 10px; }
+.list .shop-car { margin-left: 80px; display: inline-block; width: 30px; height: 30px; }
+.list .shop-car img { width: 100%; height: 100%; }

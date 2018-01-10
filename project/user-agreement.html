@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>用户协议</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/user-agreement.css" rel="stylesheet" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">用户协议</h1>
+		</header>
+
+		<div class="mui-content">
+			<h3 class="title">用户协议</h3>
+			<div class="text">
+				<h4>1.服务条款的确认</h4>
+				<ul class="mui-table-view">
+			        <li class="mui-table-view-cell">
+			            <p>水费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬水电费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬</p>
+			        </li>
+			        <li class="mui-table-view-cell">
+			            <p>水费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬水电费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬</p>
+			        </li>
+			        <li class="mui-table-view-cell">
+			            <p>水费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬水电费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬</p>
+			        </li>
+			    </ul>
+			    <h4>2.服务内容及修改、中断、终止</h4>
+				<ul class="mui-table-view">
+			        <li class="mui-table-view-cell">
+			            <p>水费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬水电费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬</p>
+			        </li>
+			        <li class="mui-table-view-cell">
+			            <p>水费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬水电费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬</p>
+			        </li>
+			        <li class="mui-table-view-cell">
+			            <p>水费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬水电费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬</p>
+			        </li>
+			    </ul>
+			    <h4>3.服务内容及修改、中断、终止</h4>
+				<ul class="mui-table-view">
+			        <li class="mui-table-view-cell">
+			            <p>水费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬水电费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬</p>
+			        </li>
+			        <li class="mui-table-view-cell">
+			            <p>水费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬水电费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬</p>
+			        </li>
+			        <li class="mui-table-view-cell">
+			            <p>水费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬水电费开始了疯狂啊暗示法加完就是否是打飞机水电费水电费就阿斯蒂芬</p>
+			        </li>
+			    </ul>
+			</div>
+			
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			var num=60;
+			var timer=null;
+			mui('.check').on('tap','i',function(){
+				mui('.check i')[0].style.backgroundColor="#ccc";
+				mui('.check i')[0].innerHTML=num+'s后重试';
+				clearInterval(timer);
+				timer=setInterval(function(){
+					num--;
+					mui('.check i')[0].innerHTML=num+'s后重试';
+					if(num==0){
+						clearInterval(timer);
+						mui('.check i')[0].style.backgroundColor='#4cd964';
+						mui('.check i')[0].innerHTML="验证码";
+						num=60;
+					}
+				},1000)
+				
+			})
+
+		</script>
+	</body>
+
+</html>

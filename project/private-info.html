@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人信息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/private-info.css" rel="stylesheet" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/mui.picker.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.p{
+			    position: relative; 
+			    line-height: 50px; 
+			    max-height: 150px;
+			    overflow: hidden;
+			}
+			.p::after{
+			    content: "..."; 
+			    position: absolute; 
+			    bottom: 0; 
+			    right: 0; 
+			    padding-left: 40px;
+			    background: -webkit-linear-gradient(left, transparent, #fff 55%);
+			    background: -o-linear-gradient(right, transparent, #fff 55%);
+			    background: -moz-linear-gradient(right, transparent, #fff 55%);
+			    background: linear-gradient(to right, transparent, #fff 55%);
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">个人信息</h1>
+		</header>
+
+		<div class="mui-content">
+			<ul class="mui-table-view touxiang">
+			    <li class="mui-table-view-cell mui-media">
+			        <a class="" href="javascript:;">
+			            <img class="mui-media-object mui-pull-right" src="img/heaPic.png">
+			            <div class="mui-media-body">
+			                <p class="name dlc">
+			                	头像
+			                </p>
+			            </div>
+			            <!--<input class="pic" type="file" name="" id="" value="" />-->
+			            <!--<input class="pic" type="file" class="file" accept="image/*" capture="camcorder" multiple />-->
+			            <input class="pic file" type="file" accept="image/*" capture="camera" multiple />
+			        </a>
+			    </li>
+			</ul>
+			<div class="info">
+				<a><i>昵称</i><input type="text" name="" id="" value="木头人" /></a>
+				<a href="#picture" ><i>性别</i><span id="sex">请选择</span></a>
+				<a id="birthday"  data-options='{"type":"date"}'><i>生日</i><span class="result">1991-6-28</span></a>
+				<a id="showCityPicker3"><i>地区</i><span id="cityResult3">请选择</span></a>
+			</div>
+			
+			<!--<a href="#picture" class="mui-btn mui-btn-primary mui-btn-block mui-btn-outlined" style="padding: 5px 20px;">打开actionsheet</a>-->
+			<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#">男</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">女</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#picture"><b>取消</b></a>
+					</li>
+				</ul>
+			</div>
+			
+			
+			<div class="p">
+				<span>递四方速递看风景螺发斯蒂芬2蛳粉是否递四方速递看风景螺发斯蒂芬2蛳粉是否</span>
+				
+			</div>
+			
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script src="js/data.city.js"></script>
+		<script src="js/city.data-3.js"></script><!--选择地区-->
+		<script type="text/javascript">
+		
+//			for(var i=1;i<10;i++){
+//				for(var j=1;j<=i;j++){
+//					document.write(j+'*'+i+'='+i*j+" " );
+//				}
+//				document.write('<br>')
+//			}
+		
+		var w=mui('.p span')[0].offsetWidth;
+		var b=mui('body')[0].offsetWidth-60;
+		if(w>=b){
+			console.log(123)
+		}
+		console.log(w,b)
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			mui('.touxiang').on('change','.pic',function(){
+					var f=this.files;//获取文件对象
+					var len=f.length;//文件对象的个数
+					console.log(f);
+					for(var i=0;i<len;i++){
+						(function(index){
+							var read=new FileReader();//实例文件读取对象
+							read.readAsDataURL(f[i]);//调用读取文件的方法
+							console.log(read)
+							read.onload=function(){
+//								console.log(this.result);//添加进来的文件的路径
+								var Img=mui('.mui-media-object')[0];
+								console.log(this.result)
+								Img.src=this.result;
+//								$('.headPic').append(Img)
+							}
+						})(i)
+					}
+					return false;//阻止默认事件
+				})
+			
+			
+			
+			mui('body').on('shown', '.mui-popover', function(e) {
+				//console.log('shown', e.detail.id);//detail为当前popover元素
+			});
+			mui('body').on('hidden', '.mui-popover', function(e) {
+				//console.log('hidden', e.detail.id);//detail为当前popover元素
+			});
+			
+			//选择性别
+			var sex = document.getElementById("sex");
+			mui('body').on('tap', '.mui-popover-action li>a', function() {
+				var a = this,
+					parent;
+				//根据点击按钮，反推当前是哪个actionsheet
+				for (parent = a.parentNode; parent != document.body; parent = parent.parentNode) {
+					if (parent.classList.contains('mui-popover-action')) {
+						break;
+					}
+				}
+				//关闭actionsheet
+				mui('#' + parent.id).popover('toggle');
+				if(a.innerText==='取消'){
+					return;
+				}
+				sex.innerHTML =  a.innerHTML;
+			})
+			
+			
+			//生日
+			var btn=document.getElementById('birthday');
+			var result=document.getElementsByClassName('result')[0];
+			btn.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						/*
+						 * 首次显示时实例化组件
+						 * 示例为了简洁，将 options 放在了按钮的 dom 上
+						 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+						 */
+						var picker = new mui.DtPicker({
+							type:"date",
+							beginYear: 1980,//设置开始日期 
+    						endYear: 2017,//设置结束日期 
+						});
+						picker.show(function(rs) {
+							/*
+							 * rs.value 拼合后的 value
+							 * rs.text 拼合后的 text
+							 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+							 * rs.m 月，用法同年
+							 * rs.d 日，用法同年
+							 * rs.h 时，用法同年
+							 * rs.i 分（minutes 的第二个字母），用法同年
+							 */
+							result.innerText = rs.text;
+							/* 
+							 * 返回 false 可以阻止选择框的关闭
+							 * return false;
+							 */
+							/*
+							 * 释放组件资源，释放后将将不能再操作组件
+							 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+							 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+							 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+							 */
+							picker.dispose();
+						});
+					}, false);
+					
+					//地址选择
+					mui.ready(function(){
+						var cityPicker3 = new mui.PopPicker({
+							layer: 3
+						});
+						cityPicker3.setData(cityData3);
+						var showCityPickerButton = document.getElementById('showCityPicker3');
+						var cityResult3 = document.getElementById('cityResult3');
+						showCityPickerButton.addEventListener('tap', function(event) {
+							cityPicker3.show(function(items) {
+								cityResult3.innerText =(items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+								//返回 false 可以阻止选择框的关闭
+								//return false;
+							});
+						}, false);
+					})
+			
+		</script>
+	</body>
+
+</html>

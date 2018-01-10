@@ -1,0 +1,31 @@
+@charset "UTF-8";
+.list{
+    padding: 0 15px;
+    dl{
+        padding: 25px 15px;
+        background: #fff;
+        border: 1px solid #F0AD4E;
+        border-radius: 5px;
+        border-top: 20px solid #F0AD4E;
+        dt{
+            color: #F0AD4E;
+        }
+        dd{
+            p{
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .guoqi{
+        border-top-color:#ccc ;
+        dt{
+            color: #ccc;
+        }
+    }
+    .yishiyong{
+        border-top-color:#ccc ;
+        dt{
+            color: #ccc;
+        }
+    }
+}

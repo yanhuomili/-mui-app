@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>订单管理</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/order-manage.css">
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			.mui-bar~.mui-content .mui-fullscreen {
+				top: 44px;
+				height: auto;
+			}
+			.mui-pull-top-tips {
+				position: absolute;
+				top: -20px;
+				left: 50%;
+				margin-left: -25px;
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+				z-index: 1;
+			}
+			.mui-bar~.mui-pull-top-tips {
+				top: 24px;
+			}
+			.mui-pull-top-wrapper {
+				width: 42px;
+				height: 42px;
+				display: block;
+				text-align: center;
+				background-color: #efeff4;
+				border: 1px solid #ddd;
+				border-radius: 25px;
+				background-clip: padding-box;
+				box-shadow: 0 4px 10px #bbb;
+				overflow: hidden;
+			}
+			.mui-pull-top-tips.mui-transitioning {
+				-webkit-transition-duration: 200ms;
+				transition-duration: 200ms;
+			}
+			.mui-pull-top-tips .mui-pull-loading {
+				/*-webkit-backface-visibility: hidden;
+				-webkit-transition-duration: 400ms;
+				transition-duration: 400ms;*/
+				
+				margin: 0;
+			}
+			.mui-pull-top-wrapper .mui-icon,
+			.mui-pull-top-wrapper .mui-spinner {
+				margin-top: 7px;
+			}
+			.mui-pull-top-wrapper .mui-icon.mui-reverse {
+				/*-webkit-transform: rotate(180deg) translateZ(0);*/
+			}
+			.mui-pull-bottom-tips {
+				text-align: center;
+				background-color: #efeff4;
+				font-size: 15px;
+				line-height: 40px;
+				color: #777;
+			}
+			.mui-pull-top-canvas {
+				overflow: hidden;
+				background-color: #fafafa;
+				border-radius: 40px;
+				box-shadow: 0 4px 10px #bbb;
+				width: 40px;
+				height: 40px;
+				margin: 0 auto;
+			}
+			.mui-pull-top-canvas canvas {
+				width: 40px;
+			}
+			.mui-slider-indicator.mui-segmented-control {
+				background-color: #efeff4;
+			}
+			.mui-table-view:after { height: 0; }
+
+			img { width: 100%; }
+			
+			i, b, em { font-style: normal; }
+			
+			ul, li { list-style: none; margin: 0; padding: 0; }
+			
+			.mui-bar { background-color: #1ca5ff; }
+			
+			.mui-title { color: #fff; }
+			
+			.mui-bar a { width: 40px; color: #fff; font-weight: 800; }
+			.mui-bar a img { width: 100%; }
+			
+			.mui-table-view:before { height: 0; }
+			
+			.mui-table-view-cell:after { left: 0; background: #eee; }
+			
+			.productList li a { padding: 11px 10px !important; }
+			.productList li a img { max-width: 100px !important; height: 75px !important; }
+			.productList li a .title { display: inline-block; margin-bottom: 10px; }
+			.productList li a .mui-ellipsis { overflow: hidden; white-space: normal; }
+			.productList li a .mui-ellipsis i { margin-right: 10px; }
+			.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+				width: 100% !important;
+				left: 0 !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">订单管理</h1>
+		</header>
+		<div id="upbox" class="mui-content">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll topMenu">
+						<a class="mui-control-item mui-active" href="#item1mobile">
+							未完成
+						</a>
+						<a class="mui-control-item" href="#item2mobile">
+							已完成
+						</a>
+						<!--<a class="mui-control-item" href="#item3mobile">
+							合作商
+						</a>-->
+					</div>
+				</div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper box">
+							<div class="mui-scroll">
+								<ul class="mui-table-view list">
+								    <li class="mui-table-view-cell mui-media">
+								    	<p class="order-number">订单号 <span>1575376435</span></p>
+								        <a href="javascript:;">
+								            <img class="mui-media-object mui-pull-left" src="img/hz3.jpg">
+								            <div class="mui-media-body">
+								                <p class="text">地址广州市白云区云城西路89号地址广州市白云区云城西路89号</p>
+								                <p class="">属性： <span>256g/袋</span></p>
+								                <p><i>&yen; 59.9</i></p>
+								            </div>
+								        </a>
+								        <h4><span>共5件商品</span><span>实付：&yen;254</span><button>取消订单</button><button>待付款</button></h4>
+								    </li>
+								    <li class="mui-table-view-cell mui-media">
+								    	<p class="order-number">订单号 <span>1575376435</span></p>
+								        <a href="javascript:;">
+								            <img class="mui-media-object mui-pull-left" src="img/hz3.jpg">
+								            <div class="mui-media-body">
+								                <p class="text">地址广州市白云区云城西路89号地址广州市白云区云城西路89号</p>
+								                <p class="">属性： <span>256g/袋</span></p>
+								                <p><i>&yen; 59.9</i></p>
+								            </div>
+								        </a>
+								        <h4><span>共5件商品</span><span>实付：&yen;254</span><button>取消订单</button><button>待付款</button></h4>
+								    </li>
+								</ul>
+								
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper box">
+							<div class="mui-scroll">
+								<ul class="mui-table-view list">
+								    <li class="mui-table-view-cell mui-media">
+								    	<p class="order-number">订单号 <span>1575376435</span></p>
+								        <a href="javascript:;">
+								            <img class="mui-media-object mui-pull-left" src="img/hz3.jpg">
+								            <div class="mui-media-body">
+								                <p class="text">地址广州市白云区云城西路89号地址广州市白云区云城西路89号</p>
+								                <p class="">属性： <span>256g/袋</span></p>
+								                <p><i>&yen; 59.9</i></p>
+								            </div>
+								        </a>
+								        <p class="sh-p"><span>共5件商品</span><span>实付：&yen;254</span></p>
+								        <h4><button>立即评价</button><button class="shouhou">售货服务</button></h4>
+								    </li>
+								    <li class="mui-table-view-cell mui-media">
+								    	<p class="order-number">订单号 <span>1575376435</span></p>
+								        <a href="javascript:;">
+								            <img class="mui-media-object mui-pull-left" src="img/hz3.jpg">
+								            <div class="mui-media-body">
+								                <p class="text">地址广州市白云区云城西路89号地址广州市白云区云城西路89号</p>
+								                <p class="">属性： <span>256g/袋</span></p>
+								                <p><i>&yen; 59.9</i></p>
+								            </div>
+								        </a>
+								        <p class="sh-p"><span>共5件商品</span><span>实付：&yen;254</span></p>
+								        <h4><button class="comment">已评价</button><button class="shouhou">售后服务</button></h4>
+								    </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				
+					
+				</div>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.pullToRefresh.js"></script>
+		<script src="js/mui.pullToRefresh.material.js"></script>
+		<script>
+			mui.init({
+				gestureConfig:{
+					longtap: true//可以通过参数配置来确定想要监听的事件
+				}
+			});
+			var index=0;
+			
+			
+			var a=document.getElementsByClassName('mui-control-item');
+			for(var i=0;i<a.length;i++){
+				a[i].setAttribute('zdy',i);
+			}
+			mui('.topMenu').on('tap','.mui-control-item',function(){
+				index=this.getAttribute('zdy');
+				console.log(index)
+				mui('#slider').slider().gotoItem(index);
+			})
+			mui('#slider').slider().gotoItem(index);//进来的时候页面如果是
+			(function($) {
+				//阻尼系数
+				var deceleration = mui.os.ios?0.003:0.0009;
+				$('.mui-scroll-wrapper').scroll({//加载下拉组件并配置一些参数
+					bounce: true,
+					indicators: true, //是否显示滚动条
+					deceleration:deceleration
+				});
+				var count = 0;
+				$.ready(function() {
+					
+					//循环初始化所有下拉刷新，上拉加载。
+					$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+						console.log($(pullRefreshEl))
+						$(pullRefreshEl).pullToRefresh({
+							down: {//下拉时出发的函数
+								callback: function() {
+									var self = this;
+									setTimeout(function() {
+//										alert('刷新成功')
+//										var ul = self.element.querySelector('.mui-table-view');
+//										ul.insertBefore(createFragment(ul, index, 10, true), ul.firstChild);
+										mui.toast('刷新成功');
+										self.endPullDownToRefresh();
+									}, 1000);
+								}
+							},
+							up: {
+								callback: function() {//拉到底不的时候出发的函数
+									var self = this;
+									console.log(index)
+									setTimeout(function() {//模拟获取数据后，隐藏正在加载的字样
+//										self.endPullUpToRefresh(true);
+										if(index==1){
+											
+										}
+										mui.toast(count)
+//										mui('#slider').pullRefresh().endPullupToRefresh((++count >= 2)); 
+	
+										var ul = self.element.querySelector('.mui-table-view');
+										var fragment = document.createDocumentFragment();
+										for(var i=0;i<5;i++){
+											var li=document.createElement('li');
+											li.className="mui-table-view-cell mui-media";
+											if(index==0){
+												li.innerHTML='<p class="order-number">订单号 <span>1575376435</span></p>'
+												        +'<a href="javascript:;">'
+												            +'<img class="mui-media-object mui-pull-left" src="img/hz3.jpg">'
+												            +'<div class="mui-media-body">'
+												                +'<p class="text">地址广州市白云区云城西路89号地址广州市白云区云城西路89号</p>'
+												                +'<p class="">属性： <span>256g/袋</span></p>'
+												                +'<p><i>&yen; 59.9</i></p>'
+												            +'</div>'
+												        +'</a>'
+												        +'<h4><span>共5件商品</span><span>实付：&yen;254</span><button>取消订单</button><button>待付款</button></h4>'
+											}else{
+												li.innerHTML='<p class="order-number">订单号 <span>1575376435</span></p>'
+												        +'<a href="javascript:;">'
+												            +'<img class="mui-media-object mui-pull-left" src="img/hz3.jpg">'
+												            +'<div class="mui-media-body">'
+												                +'<p class="text">地址广州市白云区云城西路89号地址广州市白云区云城西路89号</p>'
+												                +'<p class="">属性： <span>256g/袋</span></p>'
+												                +'<p><i>&yen; 59.9</i></p>'
+												            +'</div>'
+												            +'</a>'
+												        +'<p class="sh-p"><span>共5件商品</span><span>实付：&yen;254</span></p>'
+								        				+'<h4><button>立即评价</button><button class="shouhou">售货服务</button></h4>'
+											}
+											fragment.appendChild(li);
+											
+										}
+										console.log(fragment)
+										ul.appendChild(fragment);
+										self.endPullUpToRefresh();
+									}, 1000);
+								}
+							}
+						});
+					});
+					var createFragment = function(ul, index, count, reverse) {
+						var length = ul.querySelectorAll('li').length;
+						var fragment = document.createDocumentFragment();
+						var li;
+						for (var i = 0; i < count; i++) {
+							li = document.createElement('li');
+							li.className = 'mui-table-view-cell';
+							li.innerHTML = '第' + (index + 1) + '个选项卡子项-' + (length + (reverse ? (count - i) : (i + 1)));
+							fragment.appendChild(li);
+						}
+						console.log(fragment);//虚拟节点
+						return fragment;
+					};
+				});
+			})(mui);
+		</script>
+	</body>
+
+</html>

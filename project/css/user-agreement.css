@@ -1,0 +1,12 @@
+body { background: #fff !important; }
+
+.mui-content { background: #fff !important; }
+
+.title { text-align: center; font-size: 16px; color: #333; }
+
+.text { background: #fff; }
+.text h4 { font-size: 14px; color: #666; padding: 0 15px; margin: 15px 0 0; }
+
+.mui-table-view-cell:after { height: 0 !important; }
+
+.mui-table-view-cell { padding: 8px 15px !important; }

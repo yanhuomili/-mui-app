@@ -1,0 +1,27 @@
+body, h1, h2, h3, h4, h5, h6, ul, li, dl, dt, dd, p, ol, i, em, b { font-style: normal; font-weight: normal; }
+
+.mui-bar-nav { box-shadow: none !important; }
+
+.sba { display: flex !important; justify-content: space-between !important; align-items: center !important; }
+
+.saa { display: flex !important; align-items: center !important; }
+
+.cc { display: flex; justify-content: center; align-items: center; }
+
+.sbd { display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; }
+
+.dlc { display: flex; flex-direction: column; justify-content: center; }
+
+.bbn { background: transparent !important; border: none !important; border-radius: initial !important; }
+
+.mui-table-view-cell:after { left: 0 !important; }
+
+.mui-table-view:before { height: 0 !important; }
+
+.mui-table-view:after { height: 0 !important; }
+
+.mui-bar { background-color: #1ca5ff !important; }
+
+.mui-title { color: #fff !important; }
+
+.mui-bar a { width: 40px; color: #fff; font-weight: normal  !important; }

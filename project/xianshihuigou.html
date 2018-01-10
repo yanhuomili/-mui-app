@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>限时惠购</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/xianshihuigou.css" rel="stylesheet" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">限时惠购</h1>
+		</header>
+		<div class="mui-content">
+			<!--轮播图-->
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="img/banner.jpg">
+						</a>
+					</div>
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/banner.jpg">
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/banner.jpg">
+						</a>
+					</div>
+					<!-- 第三张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/banner.jpg">
+						</a>
+					</div>
+					<!-- 第四张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="img/banner.jpg">
+						</a>
+					</div>
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="img/banner.jpg">
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+		    <div class="good-list">
+		    	<ul class="mui-table-view list">
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="img/fruits.jpg">
+				            <div class="mui-media-body">
+				                <p class="text">地址广州市白云区云城西路89号地址广州市白云区云城西路89号</p>
+				                <p><i>&yen; 59.9</i><s>￥122</s></p>
+				            </div>
+				        </a>
+				        <div class="sba order"><p>剩余时间：<span class="hours">04</span>-<span class="minute">35</span>-<span class="second">55</span></p><button class="mui-btn-danger">立刻下单</button></div>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="img/fruits.jpg">
+				            <div class="mui-media-body">
+				                <p class="text">地址广州市白云区云城西路89号地址广州市白云区云城西路89号</p>
+				                <p><i>&yen; 59.9</i><s>￥122</s></p>
+				            </div>
+				        </a>
+				        <div class="sba order"><p>剩余时间：<span class="hours">04</span>-<span class="minute">35</span>-<span class="second">55</span></p><button class="mui-btn-danger">立刻下单</button></div>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="img/fruits.jpg">
+				            <div class="mui-media-body">
+				                <p class="text">地址广州市白云区云城西路89号地址广州市白云区云城西路89号</p>
+				                <p><i>&yen; 59.9</i><s>￥122</s></p>
+				            </div>
+				        </a>
+				        <div class="sba order"><p>剩余时间：<span class="hours">04</span>-<span class="minute">35</span>-<span class="second">55</span></p><button class="mui-btn-danger">立刻下单</button></div>
+				    </li>
+				    <li class="mui-table-view-cell mui-media">
+				        <a href="javascript:;">
+				            <img class="mui-media-object mui-pull-left" src="img/fruits.jpg">
+				            <div class="mui-media-body">
+				                <p class="text">地址广州市白云区云城西路89号地址广州市白云区云城西路89号</p>
+				                <p><i>&yen; 59.9</i><s>￥122</s></p>
+				            </div>
+				        </a>
+				        <div class="sba order"><p>剩余时间：<span class="hours">04</span>-<span class="minute">35</span>-<span class="second">55</span></p><button class="mui-btn-danger">立刻下单</button></div>
+				    </li>
+				</ul>
+		    </div>
+			
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			//倒计时
+				remainTime();
+				function remainTime(){
+					var timer=setInterval(function(){
+						var time1=new Date();
+						var time2=new Date('2017/10/27 19:06');
+						t=time1-time2;
+						
+						console.log(t);
+						var restTime=Math.floor((time2-time1)/1000);
+						var second=double(restTime%60);//剩余的秒数
+						var minute=double(Math.floor(restTime/60%60));
+						var hours=double(Math.floor(restTime/3600));
+						if(hours=='00'&minute=='00'&&second=='00'){
+							clearInterval(timer);
+							time();
+							console.log('开抢啦')
+						}
+						mui('.hours')[0].innerText=hours;
+						mui('.minute')[0].innerText=minute;
+						mui('.second')[0].innerText=second;
+						
+						if(t>0){
+							clearInterval(timer);
+							mui('.hours')[0].innerText='00';
+							mui('.minute')[0].innerText='00';
+							mui('.second')[0].innerText='00';
+						}
+					},1000)
+					
+					
+				}
+				
+				//正面计时
+//				time();
+				function time(){
+					var miao='00'; 
+					var fen='00';
+					var shi='00';
+					var timer2=setInterval(function(){
+						miao++;
+						if(miao>59){
+							miao=0;
+							fen++;
+							fen=double(fen);
+						}
+						if(fen>59){
+							fen=0;
+							shi++;
+							shi=double(shi);
+						}
+						miao=double(miao);
+						mui('.hours')[0].innerText=shi;
+						mui('.minute')[0].innerText=fen;
+						mui('.second')[0].innerText=miao;
+						
+					},1000);
+				}
+				function double(n){
+					return n=n<10?'0'+n:n;
+				}
+
+		</script>
+	</body>
+
+</html>

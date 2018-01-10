@@ -1,0 +1,34 @@
+.picture { padding: 20px 0; box-sizing: border-box; background: #fff; margin-bottom: 10px; }
+.picture img { width: 60px; height: 60px; }
+
+.explain { margin: 10px 0 !important; }
+
+.huiyuan .title { border-bottom: 1px solid #eee; }
+.huiyuan .title p { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.huiyuan .title i { display: inline-block; width: 19px; height: 19px; margin-right: 10px; }
+.huiyuan .title i img { width: 100%; height: 100%; }
+.huiyuan .list .mui-table-view-cell:after { height: 0; }
+.huiyuan .list li { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; border-bottom: 1px solid #eee; }
+.huiyuan .list li dl { margin: 0; }
+.huiyuan .list li dl dt { width: 30px; height: 33px; margin: 0; }
+.huiyuan .list li dl dt img { width: 100%; height: 100%; }
+.huiyuan .list li dl dd { margin: 0; margin-left: 10px; font-size: 14px; }
+.huiyuan .list li dl dd .price { font-size: 12px; color: #4ba60f; }
+.huiyuan .list li button { border: 1px solid #4ba60f !important; padding: 4px 20px; color: #4ba60f; }
+
+.dianpu { margin-bottom: 15px !important; }
+.dianpu .dizhi .title { font-size: 17px; color: #333; }
+.dianpu .dizhi p { margin-bottom: 5px; }
+.dianpu .dizhi p button { padding: 0; border: none; }
+
+.jieshao { margin-bottom: 15px !important; }
+.jieshao p { color: #333; font-size: 16px; }
+
+.good-list { background: #fff; }
+.good-list .title { height: 40px; font-size: 16px; padding: 0 15px; box-sizing: border-box; border-bottom: 1px solid #eee; }
+.good-list .title i { display: inline-block; width: 19px; height: 19px; margin-right: 10px; }
+.good-list .title i img { width: 100%; height: 100%; }
+.good-list .list .mui-media-object { max-width: 76px !important; height: 76px !important; }
+.good-list .list .mui-media-body i { color: #4ba60f; margin-right: 30px; font-style: normal !important; }
+.good-list .list p { white-space: normal; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.good-list .list .text { margin-bottom: 10px; }
