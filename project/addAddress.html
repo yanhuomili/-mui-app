@@ -49,27 +49,27 @@
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
-			
+			//项目更改后需要重新上传到github上面去。
 			function getVals(){
-    var res = getCheckBoxRes('rds');
-    if(res.length < 1){
-        mui.toast('请选择');
-        return;
-    }
-    mui.toast(res);
-}
-function getCheckBoxRes(className){
-    var rdsObj   = document.getElementsByClassName(className);
-    var checkVal = new Array();
-    var k        = 0;
-    for(i = 0; i < rdsObj.length; i++){
-        if(rdsObj[i].checked){
-            checkVal[k] = rdsObj[i].value;
-            k++;
-        }
-    }
-    return checkVal;
-}
+			    var res = getCheckBoxRes('rds');
+			    if(res.length < 1){
+			        mui.toast('请选择');
+			        return;
+			    }
+			    mui.toast(res);
+			}
+			function getCheckBoxRes(className){
+			    var rdsObj   = document.getElementsByClassName(className);
+			    var checkVal = new Array();
+			    var k        = 0;
+			    for(i = 0; i < rdsObj.length; i++){
+			        if(rdsObj[i].checked){
+			            checkVal[k] = rdsObj[i].value;
+			            k++;
+			        }
+			    }
+			    return checkVal;
+			}
 		</script>
 	</body>
 
